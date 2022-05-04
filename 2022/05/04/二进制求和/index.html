@@ -370,31 +370,37 @@
 
 
 
-  
-  
-  
 
-  
+  <div id="gitalk-container" style="padding: 0px 30px 0px 30px;"></div> 
 
-  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+<script type="text/javascript">
 
-  
-  <div id="gitment-ctn"></div> 
-<link rel="stylesheet" href="https://jjeejj.github.io/css/gitment.css">
-<script src="https://www.wenjunjiang.win/js/gitment.js"></script>
-<script>
-var gitment = new Gitment({
-  id: "http://example.com/2022/05/04/%E4%BA%8C%E8%BF%9B%E5%88%B6%E6%B1%82%E5%92%8C/",
-  owner: 'kongyu-123',
-  repo: 'https://github.com/kongyu-123/kongyu-123.github.io.git',
-  oauth: {
-    client_id: '7946d46a2fe1933aed8f',
-    client_secret: '9dae607c34f9b6d09fb5811a0b095c4ecb6de4ba',
-  },
+if(true){
+	var gitalk = new Gitalk({
+  	clientID: '7946d46a2fe1933aed8f',
+  	clientSecret: '9dae607c34f9b6d09fb5811a0b095c4ecb6de4ba',
+  	repo: 'https://github.com/kongyu-123/kongyu-123.github.io.git',
+  	owner: 'kongyu-123',
+  	admin: ['Ziven-n'],
+  	id: 'Wed May 04 2022 23:28:48 GMT+0800',
+  	distractionFreeMode: 'true'
 })
-gitment.render('gitment-ctn')
+gitalk.render('gitalk-container') 
+}
 </script>
   
+  
+  
+  
+
+  
+
+  
+
+  
+
 
           </div>
         </div>
