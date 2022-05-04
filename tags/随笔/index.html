@@ -6,22 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>Hexo</title>
+  <title>Tag: 随笔 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="解数独">
-<meta property="og:type" content="article">
+  <meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/2022/05/03/my-paper/index.html">
+<meta property="og:url" content="http://example.com/tags/%E9%9A%8F%E7%AC%94/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="解数独">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2021/04/12/250px-sudoku-by-l2g-20050714svg.png">
-<meta property="og:image" content="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2021/04/12/250px-sudoku-by-l2g-20050714_solutionsvg.png">
-<meta property="article:published_time" content="2022-05-03T14:56:06.242Z">
-<meta property="article:modified_time" content="2022-05-03T15:37:41.656Z">
 <meta property="article:author" content="空鱼">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2021/04/12/250px-sudoku-by-l2g-20050714svg.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -42,6 +35,11 @@
 <meta name="generator" content="Hexo 6.1.0"></head>
 
 <body>
+<link rel="stylesheet" href="/./dist/APlayer.min.css">
+<div id="aplayer" style="z-index: 99999;"></div>
+<script src="/./dist/hls.min.js"></script>
+<script src="/./dist/APlayer.min.js"></script>
+<script src="/./dist/musicPlay.js"></script>
   <div id="container" q-class="show:isCtnShow">
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
     <div class="left-col" q-class="show:isShow">
@@ -79,7 +77,7 @@
     			
             
     			
-    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">关于我</a>
+    			<a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)">哈哈哈</a>
     			
             
 		</nav>
@@ -93,6 +91,8 @@
 					<a class="mail" target="_blank" href="mailto:2867863043@qq.com" title="mail"><i class="icon-mail"></i></a>
 		        
 			</div>
+<!-- 网易云音乐插件 -->
+
 		</nav>
 	</header>		
 </div>
@@ -159,177 +159,60 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-my-paper" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
+            
+  
+  
     
-    <div class="article-entry" itemprop="articleBody">
+    
       
-        <h1 id="解数独"><a href="#解数独" class="headerlink" title="解数独"></a>解数独</h1><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=430685732&auto=1&height=66"></iframe>
-<span id="more"></span>遍写一个程序，通过填充空格来解决数独问题。
-
-<p>数独的解法需 遵循如下规则：</p>
-<p>数字 1-9 在每一行只能出现一次。<br>数字 1-9 在每一列只能出现一次。<br>数字 1-9 在每一个以粗实线分隔的 3x3 宫内只能出现一次。（请参考示例图）<br>数独部分空格内已填入了数字，空白格用 ‘.’ 表示。</p>
-<h1 id="示例-1："><a href="#示例-1：" class="headerlink" title="示例 1："></a>示例 1：</h1><p><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2021/04/12/250px-sudoku-by-l2g-20050714svg.png" alt="img"></p>
-<p>输入：board &#x3D; [[“5”,”3”,”.”,”.”,”7”,”.”,”.”,”.”,”.”],[“6”,”.”,”.”,”1”,”9”,”5”,”.”,”.”,”.”],[“.”,”9”,”8”,”.”,”.”,”.”,”.”,”6”,”.”],[“8”,”.”,”.”,”.”,”6”,”.”,”.”,”.”,”3”],[“4”,”.”,”.”,”8”,”.”,”3”,”.”,”.”,”1”],[“7”,”.”,”.”,”.”,”2”,”.”,”.”,”.”,”6”],[“.”,”6”,”.”,”.”,”.”,”.”,”2”,”8”,”.”],[“.”,”.”,”.”,”4”,”1”,”9”,”.”,”.”,”5”],[“.”,”.”,”.”,”.”,”8”,”.”,”.”,”7”,”9”]]<br>输出：[[“5”,”3”,”4”,”6”,”7”,”8”,”9”,”1”,”2”],[“6”,”7”,”2”,”1”,”9”,”5”,”3”,”4”,”8”],[“1”,”9”,”8”,”3”,”4”,”2”,”5”,”6”,”7”],[“8”,”5”,”9”,”7”,”6”,”1”,”4”,”2”,”3”],[“4”,”2”,”6”,”8”,”5”,”3”,”7”,”9”,”1”],[“7”,”1”,”3”,”9”,”2”,”4”,”8”,”5”,”6”],[“9”,”6”,”1”,”5”,”3”,”7”,”2”,”8”,”4”],[“2”,”8”,”7”,”4”,”1”,”9”,”6”,”3”,”5”],[“3”,”4”,”5”,”2”,”8”,”6”,”1”,”7”,”9”]]<br>解释：输入的数独如上图所示，唯一有效的解决方案如下所示：</p>
-<p><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2021/04/12/250px-sudoku-by-l2g-20050714_solutionsvg.png" alt="img"></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line">bool line[9][9];//1-9行1-9是否被填过</span><br><span class="line">bool column[9][9];</span><br><span class="line">bool block[3][3][9];//1-9块中1-9是否被填过</span><br><span class="line">bool valid;    //判断是否可行</span><br><span class="line">int* spaces[81];//指向81个位置,每个位置的行列坐标可以被记录在这</span><br><span class="line">int spaceSize;//空位置的个数</span><br><span class="line">void dfs(char** board,int pos)</span><br><span class="line">&#123;</span><br><span class="line">    if(pos==spaceSize)//如果当前的自己填的位置等于空位置则说明已经填完了</span><br><span class="line">    &#123;</span><br><span class="line">        valid=true;</span><br><span class="line">        return;</span><br><span class="line">    &#125;</span><br><span class="line">    //不然从第一个空位置开始填,第二次填第二个位置,也就第几个空位置和填了几个是相等的</span><br><span class="line">    int i=spaces[pos][0],j=spaces[pos][1];</span><br><span class="line">    //从1到9依次填入,当</span><br><span class="line">    for(int digit=0;digit&lt;9&amp;&amp;!valid;digit++)</span><br><span class="line">    &#123;   </span><br><span class="line">        //如果这个数在这一行这一列这一块没有被填过则把该数字填上//填上了继续进行下一块的填入</span><br><span class="line">        if(!line[i][digit]&amp;&amp;!column[j][digit]&amp;&amp;!block[i/3][j/3][digit])</span><br><span class="line">        &#123;</span><br><span class="line">            line[i][digit]=column[j][digit]=block[i/3][j/3][digit]=true;</span><br><span class="line">            board[i][j]=digit+&#x27;0&#x27;+1;</span><br><span class="line">            dfs(board,pos+1);//这里pos不能++,++之后就回不来了</span><br><span class="line">            //如果填不下去了返回上一层的这里继续执行说明这一层的数字(可以之前就填错了)填错了</span><br><span class="line">            //填错了就把那数字抹掉,上次填的数字+1,也就是for中把digit+1;</span><br><span class="line">            //在这里要做的事就是把该数字抹掉</span><br><span class="line">            line[i][digit]=column[j][digit]=block[i/3][j/3][digit]=false;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">void solveSudoku(char** board, int boardSize, int* boardColSize)&#123;</span><br><span class="line">    //将三个记录数组初始化</span><br><span class="line">    memset(line,0,sizeof(line));</span><br><span class="line">    memset(column,0,sizeof(column));</span><br><span class="line">    memset(block,0,sizeof(block));</span><br><span class="line">    valid=false;</span><br><span class="line">    spaceSize=0;</span><br><span class="line">    for(int i=0;i&lt;9;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        for(int j=0;j&lt;9;j++)</span><br><span class="line">        &#123;</span><br><span class="line">            if(board[i][j]==&#x27;.&#x27;)//如果为空记录在spaces里面</span><br><span class="line">            &#123;</span><br><span class="line">                spaces[spaceSize]=(int*)malloc(sizeof(int)*2);</span><br><span class="line">                spaces[spaceSize][0]=i;</span><br><span class="line">                spaces[spaceSize++][1]=j;</span><br><span class="line">            &#125;</span><br><span class="line">            else//不然则把该数字记录下来,三个数组都要记录 </span><br><span class="line">            &#123;</span><br><span class="line">                int digit=board[i][j]-&#x27;0&#x27;-1;</span><br><span class="line">                line[i][digit]=column[j][digit]=block[i/3][j/3][digit]=true;</span><br><span class="line">            &#125;   </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    dfs(board,0);//0表示自己填了几个数</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
       
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>感谢老板的支持<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/assets/zfbfkm.jpg">
-                      <span class="reward-type">支付宝</span>
-                    </div>
-                    
-                    
-                    <div class="reward-box-item">
-                      <img class="reward-img" src="/assets/weixinfkm.jpg">
-                      <span class="reward-type">微信</span>
-                    </div>
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2022" class="archive-year">2022</a>
         </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2022/05/04/text/" class="archive-article-date">
+  	<time datetime="2022-05-04T08:32:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-05-04</time>
+</a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2022/05/04/text/">text</a>
+    </h1>
+  
 
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2022/05/03/my-paper/" alt="微信分享二维码">
-    </div>
-</div>
+        <div class="article-info info-on-right">
+          
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
+        		</li>
+      		
+		</ul>
+	</div>
 
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+          
+
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2022/05/03/n%E7%9A%87%E5%90%8E%E9%97%AE%E9%A2%98/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          n皇后问题
-        
-      </div>
-    </a>
   
   
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-        <div class="toc-container tooltip-left">
-            <i class="icon-font icon-category"></i>
-            <div class="tooltip tooltip-east">
-                <span class="tooltip-item">
-                </span>
-                <span class="tooltip-content">
-                    <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%A7%A3%E6%95%B0%E7%8B%AC"><span class="toc-number">1.</span> <span class="toc-text">解数独</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%A4%BA%E4%BE%8B-1%EF%BC%9A"><span class="toc-number">2.</span> <span class="toc-text">示例 1：</span></a></li></ol>
-                    </div>
-                </span>
-            </div>
-        </div>
-        
-    </div>
-</aside>
-
-
-
-  
-  
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -347,14 +230,17 @@
     </div>
   </div>
 </footer>
+<!--页面点击小红心-->
+<script type="text/javascript" src="/love.js"></script>
+
     </div>
     <script>
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
@@ -401,7 +287,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
       
         
       
-      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">关于我</a></li>
+      <li style="width: 33.333333333333336%" q-on="click: openSlider(e, 'aboutme')"><a href="javascript:void(0)" q-class="active:aboutme">哈哈哈</a></li>
       
         
     </ul>
@@ -420,6 +306,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
