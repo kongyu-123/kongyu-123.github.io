@@ -362,6 +362,22 @@
   
 
   
+  <div id="gitment-ctn"></div> 
+<link rel="stylesheet" href="//imsun.github.io/gitment/style/default.css">
+<script src="//imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+var gitment = new Gitment({
+  id: "http://example.com/2022/05/03/%E8%87%AA%E6%88%91%E4%BB%8B%E7%BB%8D/",
+  owner: 'kongyu-123',
+  repo: 'https://github.com/kongyu-123/kongyu-123.github.io.git',
+  oauth: {
+    client_id: '7946d46a2fe1933aed8f',
+    client_secret: '9dae607c34f9b6d09fb5811a0b095c4ecb6de4ba',
+  },
+})
+gitment.render('gitment-ctn')
+</script>
+  
 
           </div>
         </div>
